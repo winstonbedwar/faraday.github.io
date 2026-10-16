@@ -2,9 +2,23 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
     { "source": "/about", "destination": "/about.html" },
-    { "source": "/work", "destination": "/work.html" },
-    { "source": "/project", "destination": "/project.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/team", "destination": "/team.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+
+    { "source": "/team/arao", "destination": "/team/arao.html" },
+    { "source": "/team/adubey", "destination": "/team/adubey.html" },
+    { "source": "/team/asrivastava", "destination": "/team/asrivastava.html" },
+    { "source": "/team/asubbiah", "destination": "/team/asubbiah.html" },
+    { "source": "/team/dkrishna", "destination": "/team/dkrishna.html" },
+    { "source": "/team/hvummaji", "destination": "/team/hvummaji.html" },
+    { "source": "/team/mdevarakonda", "destination": "/team/mdevarakonda.html" },
+    { "source": "/team/mmishra", "destination": "/team/mmishra.html" },
+    { "source": "/team/ntalugula", "destination": "/team/ntalugula.html" },
+    { "source": "/team/pshankar", "destination": "/team/pshankar.html" },
+    { "source": "/team/rbanerjee", "destination": "/team/rbanerjee.html" },
+    { "source": "/team/ssunil", "destination": "/team/ssunil.html" },
+    { "source": "/team/wlaw", "destination": "/team/wlaw.html" }
   ]
 }
