@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+import { resolve, relative } from "path";
 
 import fs from "fs";
 
@@ -13,9 +13,10 @@ function getHtmlEntries() {
       const stats = fs.statSync(fullPath);
 
       if (stats.isFile() && file.endsWith(".html")) {
-        const name = file.replace(/\.html$/, "") + "/index.html"; 
+        const name = relative(__dirname, fullPath).replace(/\\/g, "/").replace(/\.html$/, "");
         inputs[name] = fullPath;
       } else if (stats.isDirectory()) {
+        if (["dist", "node_modules", "public"].includes(file) || file.startsWith(".")) return;
         scanDir(fullPath);
       }
     });
